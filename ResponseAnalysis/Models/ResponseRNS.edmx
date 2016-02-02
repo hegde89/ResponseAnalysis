@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SurveyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SM">
+          <Key>
+            <PropertyRef Name="Sl" />
+          </Key>
+          <Property Name="Sl" Type="float" Nullable="false" />
+          <Property Name="Marital_Status" Type="float" />
+          <Property Name="Gender" Type="float" />
+          <Property Name="Religion" Type="float" />
+          <Property Name="Age" Type="float" />
+          <Property Name="Occupation" Type="float" />
+          <Property Name="Education" Type="float" />
+          <Property Name="CL1" Type="float" />
+          <Property Name="CL2" Type="float" />
+          <Property Name="CL3" Type="float" />
+          <Property Name="CL4" Type="float" />
+          <Property Name="CL5" Type="float" />
+          <Property Name="CL6" Type="float" />
+          <Property Name="FL1" Type="float" />
+          <Property Name="FL2" Type="float" />
+          <Property Name="FL3" Type="float" />
+          <Property Name="FL4" Type="float" />
+          <Property Name="FL5" Type="float" />
+          <Property Name="FL6" Type="float" />
+          <Property Name="PL1" Type="float" />
+          <Property Name="PL2" Type="float" />
+          <Property Name="PL3" Type="float" />
+          <Property Name="PL4" Type="float" />
+          <Property Name="PL5" Type="float" />
+          <Property Name="PL6" Type="float" />
+          <Property Name="SL1" Type="float" />
+          <Property Name="SL2" Type="float" />
+          <Property Name="SL3" Type="float" />
+          <Property Name="SL4" Type="float" />
+          <Property Name="SL5" Type="float" />
+          <Property Name="SL6" Type="float" />
+          <Property Name="HSL1" Type="float" />
+          <Property Name="HSL2" Type="float" />
+          <Property Name="HSL3" Type="float" />
+          <Property Name="HSL4" Type="float" />
+        </EntityType>
+        <EntityContainer Name="SurveyModelStoreContainer">
+          <EntitySet Name="SM" EntityType="Self.SM" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SurveyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SurveyDBContext" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="SMs" EntityType="SurveyModel.SM" />
+        </EntityContainer>
+        <EntityType Name="SM">
+          <Key>
+            <PropertyRef Name="Sl" />
+          </Key>
+          <Property Name="Sl" Type="Double" Nullable="false" />
+          <Property Name="Marital_Status" Type="Double" />
+          <Property Name="Gender" Type="Double" />
+          <Property Name="Religion" Type="Double" />
+          <Property Name="Age" Type="Double" />
+          <Property Name="Occupation" Type="Double" />
+          <Property Name="Education" Type="Double" />
+          <Property Name="CL1" Type="Double" />
+          <Property Name="CL2" Type="Double" />
+          <Property Name="CL3" Type="Double" />
+          <Property Name="CL4" Type="Double" />
+          <Property Name="CL5" Type="Double" />
+          <Property Name="CL6" Type="Double" />
+          <Property Name="FL1" Type="Double" />
+          <Property Name="FL2" Type="Double" />
+          <Property Name="FL3" Type="Double" />
+          <Property Name="FL4" Type="Double" />
+          <Property Name="FL5" Type="Double" />
+          <Property Name="FL6" Type="Double" />
+          <Property Name="PL1" Type="Double" />
+          <Property Name="PL2" Type="Double" />
+          <Property Name="PL3" Type="Double" />
+          <Property Name="PL4" Type="Double" />
+          <Property Name="PL5" Type="Double" />
+          <Property Name="PL6" Type="Double" />
+          <Property Name="SL1" Type="Double" />
+          <Property Name="SL2" Type="Double" />
+          <Property Name="SL3" Type="Double" />
+          <Property Name="SL4" Type="Double" />
+          <Property Name="SL5" Type="Double" />
+          <Property Name="SL6" Type="Double" />
+          <Property Name="HSL1" Type="Double" />
+          <Property Name="HSL2" Type="Double" />
+          <Property Name="HSL3" Type="Double" />
+          <Property Name="HSL4" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SurveyModelStoreContainer" CdmEntityContainer="SurveyDBContext" >
+          <EntitySetMapping Name="SMs">
+            <EntityTypeMapping TypeName="SurveyModel.SM">
+              <MappingFragment StoreEntitySet="SM">
+                <ScalarProperty Name="HSL4" ColumnName="HSL4" />
+                <ScalarProperty Name="HSL3" ColumnName="HSL3" />
+                <ScalarProperty Name="HSL2" ColumnName="HSL2" />
+                <ScalarProperty Name="HSL1" ColumnName="HSL1" />
+                <ScalarProperty Name="SL6" ColumnName="SL6" />
+                <ScalarProperty Name="SL5" ColumnName="SL5" />
+                <ScalarProperty Name="SL4" ColumnName="SL4" />
+                <ScalarProperty Name="SL3" ColumnName="SL3" />
+                <ScalarProperty Name="SL2" ColumnName="SL2" />
+                <ScalarProperty Name="SL1" ColumnName="SL1" />
+                <ScalarProperty Name="PL6" ColumnName="PL6" />
+                <ScalarProperty Name="PL5" ColumnName="PL5" />
+                <ScalarProperty Name="PL4" ColumnName="PL4" />
+                <ScalarProperty Name="PL3" ColumnName="PL3" />
+                <ScalarProperty Name="PL2" ColumnName="PL2" />
+                <ScalarProperty Name="PL1" ColumnName="PL1" />
+                <ScalarProperty Name="FL6" ColumnName="FL6" />
+                <ScalarProperty Name="FL5" ColumnName="FL5" />
+                <ScalarProperty Name="FL4" ColumnName="FL4" />
+                <ScalarProperty Name="FL3" ColumnName="FL3" />
+                <ScalarProperty Name="FL2" ColumnName="FL2" />
+                <ScalarProperty Name="FL1" ColumnName="FL1" />
+                <ScalarProperty Name="CL6" ColumnName="CL6" />
+                <ScalarProperty Name="CL5" ColumnName="CL5" />
+                <ScalarProperty Name="CL4" ColumnName="CL4" />
+                <ScalarProperty Name="CL3" ColumnName="CL3" />
+                <ScalarProperty Name="CL2" ColumnName="CL2" />
+                <ScalarProperty Name="CL1" ColumnName="CL1" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital_Status" />
+                <ScalarProperty Name="Sl" ColumnName="Sl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
