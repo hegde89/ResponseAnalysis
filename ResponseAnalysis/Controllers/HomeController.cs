@@ -13,8 +13,7 @@ namespace ResponseAnalysis.Controllers
         {
             SurveyDBContext db = new SurveyDBContext();
             List<SM> SurveyList1  = db.SMs.ToList();
-            Response.Write("<b>Average of CL1 is : " + db.SMs.Where(c => c.Gender == 1).Average(c => c.CL1));
-           
+                  
 
             return View(SurveyList1);
         }

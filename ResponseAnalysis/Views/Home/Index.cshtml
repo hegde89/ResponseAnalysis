@@ -2,12 +2,31 @@
 @model List<ResponseAnalysis.Models.SM>
     
 <div class="jumbotron">
-    @foreach (var Item2 in Model)
-    {
-        <ul>
-            @Item2.Education
-        </ul>
-    }
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#SL No</th>
+                <th>Martial Status</th>
+                <th>Gender</th>
+                <th>Religion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Item2 in Model)
+            {
+                <tr>
+                    <th scope="row">@Item2.Sl</th>
+                    <td>@Item2.Marital_Status</td>
+                    <td>@Item2.Gender</td>
+                    <td>@Item2.Religion</td>
+                </tr>
+                                            
+            }
+
+        </tbody>
+
+    </table>
+
 
 </div>
 
